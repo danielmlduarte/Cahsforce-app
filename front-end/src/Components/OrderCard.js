@@ -1,22 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const OrderCard = ({ notaFiscal, sacado, cedente, emissao, valor }) => {
+const OrderCard = ({ orderItem: { notaFiscal, sacado, cedente, emissao, valor } }) => {
   return (
-    <div>
-      <div>{ notaFiscal }</div>
-      <div>{ sacado }</div>
-      <div>{ cedente }</div>
-      <div>{ emissao }</div>
-      <div>{ valor }</div>
-      <div> RECEBIDO </div>
-      <button>Dados do cedente</button>
-    </div>
+    <tr className="order-card">
+      <td>{ notaFiscal }</td>
+      <td>{ sacado }</td>
+      <td>{ cedente }</td>
+      <td>{ emissao }</td>
+      <td>{ `R$ ${parseFloat(valor).toFixed(2)}` }</td>
+      <td> RECEBIDO </td>
+      <td><button>Dados do cedente</button></td>
+    </tr>
   );
 };
 
 OrderCard.propTypes = {
-  props: PropTypes
+  orderItem: PropTypes.shape({
+    notaFiscal: PropTypes.string,
+    sacado: PropTypes.string,
+    cedente: PropTypes.string,
+    emissao: PropTypes.string,
+    valor: PropTypes.string,
+  })
 };
 
 export default OrderCard;

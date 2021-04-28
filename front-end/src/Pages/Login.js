@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Input from '../Components/Input';
 
 const Login = () => {
   const [loginEmail, setLoginEmail] = useState('');
@@ -8,18 +7,18 @@ const Login = () => {
 
   return (
     <div>
-      <Input
+      <input
         name="E-mail"
-        stateValue={ loginEmail }
+        value={ loginEmail }
         id="login-email"
-        setStateValue={ setLoginEmail }
+        onChange={ ({ target: { value }}) => setLoginEmail(value) }
       />
-      <Input
+      <input
         type="password"
         name="Senha"
-        stateValue={ loginPassword }
+        value={ loginPassword }
         id="login-password"
-        setStateValue={ setLoginPassword }
+        onChange={ ({ target: { value }}) => setLoginPassword(value) }
       />
       <Link to="/main-page">
         <button type="button">
