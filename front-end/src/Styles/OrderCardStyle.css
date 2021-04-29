@@ -1,0 +1,38 @@
+.order-card {
+  align-items: center;
+  border: 1px solid #DFE2EB;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  margin: 10px 0;
+  min-height: 50px;
+}
+
+.order-text-black {
+  color: #4D5566;
+  font-size: 14px;
+  min-width: 140px;
+  text-align: left;
+}
+
+.order-text-green {
+  color: #00AD8C;
+  font-size: 14px;
+  min-width: 140px;
+  text-align: left;
+}
+
+.order-card button {
+  background-color: #ffffff;
+  border: 1px solid #CAD3FF;
+  border-radius: 24px;
+  cursor: pointer;
+  height: 32px;
+  margin-left: auto;
+  margin-right: 50px;
+  width: 165px;
+}
+
+.order-card button:hover {
+  background-color: #CAD3FF;
+}

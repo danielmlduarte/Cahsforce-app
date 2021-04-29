@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import MenuHero from '../Components/MenuHero';
 import MenuCard from '../Components/MenuCard';
 import OrdersContainer from '../Components/OrdersContainer';
 import cashforceHandsIcon from '../Assets/cashforceHandsIcon.svg';
+import '../Styles/MainPageStyles.css'
 
 import fetchNotasFicais from '../Services/API';
 
@@ -11,24 +11,34 @@ import fetchNotasFicais from '../Services/API';
 const MainPage = () => {
   const [ordersVisible, setOrdersVisible] = useState(false);
   const [ordersList, setOrdersList] = useState('');
+  const [menuClass, setMenuClass] = useState('menu-card')
 
   const handleOrderVisible = async () => {
     const orders = await fetchNotasFicais(1);
     setOrdersList(orders);
     setOrdersVisible(!ordersVisible);
+    if (ordersVisible) {
+      setMenuClass('')
+    } else {
+      setMenuClass('menu-card-active')
+    }
   };
 
   return (
     <div className="main-page">
       <div className="buyer-side">
         <MenuHero />
-        <MenuCard
-          title="Notas fiscais"
-          image={ cashforceHandsIcon }
-          click={ handleOrderVisible }
-        />
+        <div className="buyer-side-menu">
+          <MenuCard
+            title="Notas fiscais"
+            image={ cashforceHandsIcon }
+            click={ handleOrderVisible }
+            setClass={ menuClass }
+          />
+        </div>
       </div>
       <div className="buyer-content">
+        <hr className="buyer-content-line"/>
         { (ordersVisible) && <OrdersContainer orders={ ordersList } /> }
       </div>
     </div>

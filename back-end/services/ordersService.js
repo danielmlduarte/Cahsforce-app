@@ -10,6 +10,7 @@ const getOrdersByBuyerId = async (buyerId) => {
     cedente: order.provider.name,
     emissao: order.emissionDate,
     valor: order.value,
+    status: order.orderStatusBuyer,
   }));
 
   return ordersDTO;

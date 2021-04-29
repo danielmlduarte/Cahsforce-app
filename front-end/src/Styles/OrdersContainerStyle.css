@@ -1,0 +1,32 @@
+.order-table-header {
+  display: flex;
+}
+
+.order-container {
+  margin: auto;
+  width: 95%;  
+}
+
+.order-container-header {
+  color: #021B51;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.order-container-header h3{
+  margin-bottom: 5px;
+}
+
+.order-container-header h5{
+  color: #727D94;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.order-table-header span {
+  color: #A1A8B8;
+  font-size: 12px;
+  min-width: 140px;
+  text-align: left;
+}
+

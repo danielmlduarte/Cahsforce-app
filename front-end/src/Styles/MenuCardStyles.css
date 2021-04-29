@@ -1,0 +1,22 @@
+.menu-card {
+  align-items: center;
+  border-left: 4px solid #FBFDFE;
+  cursor: pointer;
+  display: flex;
+  min-height: 64px;
+  padding-left: 20px;
+}
+
+.menu-card:hover {
+  background-color: #CAD3FF;
+}
+
+.menu-card-active {
+  border-left: 4px solid #00AD8C;
+}
+
+span {
+  color: #00AD8C;
+  font-family: sans-serif;
+  margin-left: 10px;
+}

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../Styles/MenuCardStyles.css'
 
-const MenuCard = ({ title, image, click }) => {
+const MenuCard = ({ title, image, click, setClass }) => {
   return (
-    <div onClick={ click }>
+    <div className={ `menu-card ${setClass}` } onClick={ click }>
       <img src={ image } alt={ `${title} icon`}/>
       <span>{ title }</span>
     </div>
