@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import OrderCard from './OrderCard'
+import OrderCard from './OrderCard';
+
 import cashforceHandsIcon from '../Assets/cashforceHandsIcon.svg';
-import '../Styles/OrdersContainerStyle.css'
+
+import '../Styles/OrdersContainerStyle.css';
 
 
 const OrdersContainer = ({ orders }) => {
@@ -38,4 +40,4 @@ OrdersContainer.propTypes = {
   orders: PropTypes.array,
 };
 
-export default OrdersContainer
+export default OrdersContainer;

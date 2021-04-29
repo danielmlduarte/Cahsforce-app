@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../Styles/MenuCardStyles.css'
+
+import '../Styles/MenuCardStyles.css';
 
 const MenuCard = ({ title, image, click, setClass }) => {
   return (
@@ -17,4 +18,4 @@ MenuCard.propTypes = {
   click: PropTypes.func
 };
 
-export default MenuCard
+export default MenuCard;

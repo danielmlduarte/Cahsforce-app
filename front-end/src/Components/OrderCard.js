@@ -17,7 +17,7 @@ const OrderCard = ({ orderItem: { notaFiscal, sacado, cedente, emissao, valor, s
 
   const dateFormatter = (date) => {
     const dateArray = date.substr(0,10).split('-');
-    return `${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`
+    return `${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`;
   }
 
   return (

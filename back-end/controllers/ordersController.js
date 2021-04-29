@@ -20,4 +20,19 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+router.get('/', async (_req, res) => {
+
+  try {
+
+    const ordersDTO = await orderService.getOrders();
+    if (ordersDTO.length) return res.status(OK).json(ordersDTO);
+    return res.status(NOT_FOUND).json({ message: 'Não há notas' })
+
+  } catch (error) {
+
+    return res.status(INTERNAL_SERVER_ERROR).json({ message: 'Algo deu errado' });
+
+  }
+});
+
 module.exports = router;

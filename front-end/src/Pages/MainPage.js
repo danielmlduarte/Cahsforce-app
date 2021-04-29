@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import MenuHero from '../Components/MenuHero';
 import MenuCard from '../Components/MenuCard';
 import OrdersContainer from '../Components/OrdersContainer';
-import cashforceHandsIcon from '../Assets/cashforceHandsIcon.svg';
-import '../Styles/MainPageStyles.css'
+import fetchOrders from '../Services/API';
 
-import fetchNotasFicais from '../Services/API';
+import cashforceHandsIcon from '../Assets/cashforceHandsIcon.svg';
+
+import '../Styles/MainPageStyles.css';
+
 
 
 const MainPage = () => {
@@ -14,7 +16,7 @@ const MainPage = () => {
   const [menuClass, setMenuClass] = useState('menu-card')
 
   const handleOrderVisible = async () => {
-    const orders = await fetchNotasFicais(1);
+    const orders = await fetchOrders();
     setOrdersList(orders);
     setOrdersVisible(!ordersVisible);
     if (ordersVisible) {

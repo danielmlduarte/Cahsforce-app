@@ -1,5 +1,6 @@
-import React from 'react'
-import cashforceLogoAzul from '../Assets/cashforce_logo_azul.svg'
+import React from 'react';
+
+import cashforceLogoAzul from '../Assets/cashforce_logo_azul.svg';
 
 const MenuHero = () => {
   return (
@@ -9,5 +10,5 @@ const MenuHero = () => {
   )
 }
 
-export default MenuHero
+export default MenuHero;
 

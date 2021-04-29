@@ -1,8 +1,8 @@
-const fetchNotasFicais = async (id) => {
-  const endpoint = `http://localhost:3000/orders/${id}`
+const fetchOrders = async () => {
+  const endpoint = `http://localhost:3000/orders`;
   const result = await fetch(endpoint);
   const orders = await result.json();
   return orders;
 };
 
-export default fetchNotasFicais;
+export default fetchOrders;
