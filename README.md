@@ -1,5 +1,3 @@
-> Desafio final da Aceleração Dev de Java da Codenation, com apoio da Conta Azul.
-
 # App Cashforce
 
 Desenvolvimento de uma aplicação para demostração de habilidades de front-end e back-end
